@@ -1,0 +1,14 @@
+Alerta	\um	Faz um alerta, como um bipe
+Backspace	\b	Move o cursor um espaço para trás
+Formfeed	\f	Move o cursor para a próxima página lógica
+Newline	\n	Move o cursor para a próxima linha
+Retorno de carro	\r	Move o cursor para o início da linha
+Guia horizontal	\t	Imprime uma guia horizontal
+Guia Vertical	\v	Imprime uma guia vertical
+Aspas simples	\’	Imprime uma única citação
+Aspas duplas	\”	Imprime uma aspa dupla
+Barra invertida	\\	Imprime uma barra invertida.
+Ponto de interrogação	\?	Imprime um ponto de interrogação.
+Não é mais relevante. Você pode usar pontos de interrogação sem escape.
+Número octal	\(número)	Traduz-se em char representado por octal
+Número hexadecimal	\x(número)	Traduz-se em char representado pelo número hexadecimal
