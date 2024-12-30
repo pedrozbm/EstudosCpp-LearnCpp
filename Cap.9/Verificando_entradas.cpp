@@ -20,7 +20,6 @@ void ignoreLine()
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Elimina as variaveis que ficam armazenadas no buffer
 }
 
-
 double getDouble()
 {
     while (true)

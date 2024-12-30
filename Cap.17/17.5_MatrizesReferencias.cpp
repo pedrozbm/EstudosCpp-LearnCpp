@@ -8,6 +8,8 @@ int main(){
     int y{ 2 };
     int z{ 3 };
 
+    //reference wrapper referencia o objeto,
+    //Portanto, não temos custos com cópias
     std::array<std::reference_wrapper<int>, 3> arr{x ,y, z};
     arr[1].get() = 5;
 
