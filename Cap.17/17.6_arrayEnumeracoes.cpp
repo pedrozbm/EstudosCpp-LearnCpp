@@ -10,18 +10,18 @@ enum Type
     max_colors
 };
 // Usando const char* em vez de std::string_viewconstexpr 
-const char* colorName[] = { "black", "red", "blue" };
+    constexpr char* colorName[] = { "black", "red", "blue" };
 
 // Certificando-se de que o tamanho do array colorName seja igual a max_colors
 static_assert(sizeof(colorName) / sizeof(colorName[0]) == max_colors, "Tamanho do array colorName não corresponde ao número de cores!");
 }
-constexpr const char *getColorName(Color::Type color)
+    constexpr const char *getColorName(Color::Type color)
 {
     return Color::colorName[color];
 }
 // Sobrecarga do operador<< para imprimir uma cor
 std::ostream& operator<<(std::ostream& out, Color::Type color) {
-return out << getColorName(color);
+    return out << getColorName(color);
 }
 int main()
 {
@@ -29,5 +29,5 @@ int main()
     for (int i = 0; i < Color::max_colors; ++i) {
     std::cout << static_cast<Color::Type>(i) << '\n';
 }
-return 0;
+    return 0;
 }
