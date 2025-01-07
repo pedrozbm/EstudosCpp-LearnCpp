@@ -28,6 +28,7 @@ int main(){
     std::cout << '\n';
 
     //Ponteiro como iterador:
+    
     auto begin { &data[0]};
     auto end {begin + (sizeof(data)/ sizeof(data[0]))};
     for(auto ptr{begin}; ptr != end; ++ptr){
