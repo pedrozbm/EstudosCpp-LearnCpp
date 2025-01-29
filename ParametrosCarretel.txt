@@ -1,0 +1,36 @@
+Menu -> Dispositivos -> Valvula ->  Tolerancia (m/h)
+                                        Tempo ligado (0.0s)
+                                        Tempo desligado (0.0s)
+        
+                            Encoder	->  Resolucao (000 ppv)
+                                        Diametro  (000 mm)
+                                        Monitor -> (aqui não são parametros)   M Velocidad FFaixa: 0000
+                                                                            M Pressao FFaixa: 0000
+                                                                            T Velocidad FFaixa: 0000
+                                                                            T Pressao FFaixa: 0000
+                                                                            T Aplicou parado: 0000
+
+                            Transdutor Pressao ->   Faixa pressao -> 0000
+                                                    Sensor utilizado -> SICK / HYDAC
+                                                    Setpoint pressao minima -> 00.0 kgf                                 
+	    Modem ->    Enviadas
+                    Pendentes
+                    Processadas
+                    Reprocessadas
+                    Tempo
+	    Frota -> COD equipamento
+
+Operador -> Ajuste e setpoint ->    Velocidade Recolhimento -> 0001 m/h
+                                    Ajuste Comprimento -> Distancia Inicial -> 0000m
+            Calibrar valvula  ->    Parar 
+                              ->    Abrir
+                              ->    Fechar
+            Alertas -> 
+            Bocal -> Diametro bocal -> 00mm
+
+Tela Principal -> Horimetro
+                  Estado(PARADO, ESTICANDO)
+                  Velocidade (m/h)
+                  SV (mh)
+                  Bateria
+                  kgf

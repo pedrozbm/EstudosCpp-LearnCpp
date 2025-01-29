@@ -49,6 +49,7 @@ int main()
     auto procuraPalavra{std::find_if(arrStrings.begin(), arrStrings.end(), contemString)};
     //usando cont e cont_if para contar ocorrencias 
     auto elan{std::count_if(arrStrings.begin(), arrStrings.end(), contemString)};
+    
     if (procuraPalavra == arrStrings.end())
     {
         std::cout << "nao encontrado";
