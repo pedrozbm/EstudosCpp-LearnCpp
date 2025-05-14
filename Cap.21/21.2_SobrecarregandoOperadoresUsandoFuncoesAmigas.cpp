@@ -1,5 +1,8 @@
 #include <iostream>
 
+// Existem diferentes maneiras de sobrecarregar um operador
+// Abordaremos função amiga aqui
+
 class Cents
 {
 private:
@@ -9,12 +12,19 @@ public:
     Cents(int cents) : m_cents{cents} {};
 
     friend Cents operator+(const Cents& c1, const Cents& c2);
-
+    friend Cents operator-(const Cents& c1, const Cents& c2);
+    friend Cents operator*(const Cents& c1, const Cents& c2);
     int getCents() const {return m_cents;}    
 };
 
 Cents operator+(const Cents& c1, const Cents& c2){
     return c1.m_cents + c2.m_cents;
+}
+Cents operator-(const Cents& c1, const Cents& c2){
+    return c1.m_cents - c2.m_cents;
+}
+Cents operator*(const Cents& c1, const Cents& c2){
+    return c1.m_cents * c2.m_cents;
 }
 int main()
 {   
