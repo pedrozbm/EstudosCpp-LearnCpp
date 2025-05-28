@@ -22,19 +22,19 @@ class Timer{
 };
 int fibonacci(std::size_t count)
 {
-	// We'll use a static std::vector to cache calculated results
+    // Usaremos um std::vector estático para armazenar em cache os resultados calculados
 	static std::vector<int> results{ 0, 1 };
 
-	// If we've already seen this count, then use the cache'd result
+    // Se já vimos esse valor, então use o resultado armazenado em cache
 	if (count < results.size())
 		return results[count];
 
-	// Otherwise calculate the new result and add it
+    // Caso contrário, calcule o novo resultado e adicione-o
 	results.push_back(fibonacci(count - 1) + fibonacci(count - 2));
 	return results[count];
 }
 
-// And a main program to display the first 13 Fibonacci numbers
+// E um programa principal para exibir os primeiros 13 números de Fibonacci
 int main()
 {
     Timer t;
