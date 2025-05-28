@@ -4,9 +4,6 @@
 // Uma função amiga é uma função que não é membro de uma classe, mas tem acesso aos membros privados e protegidos dessa classe.
 // Isso é útil quando você deseja sobrecarregar um operador que envolve dois objetos de diferentes classes ou quando você não quer tornar a função um membro da classe.
 
-// Existem diferentes maneiras de sobrecarregar um operador
-// Abordaremos função amiga aqui
-
 class Cents
 {
 private:
