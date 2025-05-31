@@ -29,6 +29,10 @@ public:
     Typecast sobrecarregados não declaram um tipo de retorno, o nome da conversão (por exemplo, int) é usado como
     tipo de retorno permitido. Isso evita redundância na declaração.
     Agora em nosso main poderiamos chamar printInt(cents)
+    O compilador primeiro notará que a função printInt() possui int parametro
+    Em seguida notará que cents não é um int. Por fim verificará se fornecemos uma maneira 
+    de fazer essa conversao, como fizemos, o valor int retornado é passado para printInt()
+    Continuo em 21.11_Res1
     */
 
     int getCents() const {return m_cents;}
@@ -53,4 +57,6 @@ int main()
     // O compilador entenderá que deve usar conversões implicitas ou
     // conversões de conversão.
     // Para contornar isso temos a nosso favor a sobrecarga dos operadores typecast
+    //Continuo em 21.11_Res1
+
 }
