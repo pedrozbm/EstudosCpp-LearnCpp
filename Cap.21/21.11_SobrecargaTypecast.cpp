@@ -23,7 +23,7 @@ public:
     operator int() const {return m_cents;}
     /*Algumas obs importante:
     Typecasts sobrecarregados devem ser membros não estaticos e dever ser const usados em objetos const
-    Typecasts sobrecarregados não possuem parâmetros explícitos, pois não há omo passar argumentos implícitos
+    Typecasts sobrecarregados não possuem parâmetros explícitos, pois não há como passar argumentos implícitos
     para eles
     Eles ainda possuem um *this parâmetro oculto, apontando para o objeto implícito (que é o objeto a ser convertido)
     Typecast sobrecarregados não declaram um tipo de retorno, o nome da conversão (por exemplo, int) é usado como

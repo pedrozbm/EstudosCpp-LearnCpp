@@ -19,14 +19,14 @@ class Timer{
             return std::chrono::duration_cast<Second>(Clock::now() - m_beg).count();
         }
 };
-int main() {
+int main() {1
     double num1, num2;
     char operacao;
 
     // Solicita ao usuário os dois números e a operação
     cout << "Digite o primeiro número: ";
     cin >> num1;
-    
+    \
     cout << "Digite o operador (+, -, *, /): ";
     cin >> operacao;
     

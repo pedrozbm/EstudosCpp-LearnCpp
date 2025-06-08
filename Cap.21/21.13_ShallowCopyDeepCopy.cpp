@@ -7,6 +7,7 @@ que usa um método de cópia membro a membro (cópia superficial)
 Quando as classes não tem nenhuma memória alocada dinamicamente
 isso funciona bem.
 No entanto, ao projetar classes que manipulam memória alocada
+
 dinamicamente, a cópia superficial pode causar problemas. 
 Isso ocorre porque cópias superficiais de um ponteiro apenas copiam 
 o endereço do ponteiro, não alocam memória nem copiam o conteudo apontado
