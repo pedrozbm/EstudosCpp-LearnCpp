@@ -81,7 +81,7 @@ Caso tenha, alocamos memoria suficeinte para armazenar uma cópia dela
 Por fim, copiamos manualmente a string.
 Agora usamos o operador de atribuição sorecarregado:
 */
-MyString& MyStrinh::operator=(const MyString& source){
+MyString& MyString::operator=(const MyString& source){
     if(this != &source){
         deepCopy(source);
     }
