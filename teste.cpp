@@ -1,25 +1,23 @@
 #include <iostream>
+#define CONVERTER_CM_METROS 0.01f
 
 int main()
 {
+    double Pi = 3.14159265359;
+    double raio_roldana{100};
+    double resolucao{360};
+    int metrosEsticados_f = 27;
 
-    int raio_roldana{144};
-    int resolucao{360};
 
-    double centimetros_por_pulso = (((raio_roldana / 10.0f) * 3.14159) / resolucao);
-    std::cout << centimetros_por_pulso << "\n";
 
-    float raioDvi = raio_roldana / 10;
-    // raioDvi = raio_roldana;
+    double perimetro_f         = ((raio_roldana / 10.0f) * Pi);
+    std::cout << perimetro_f << '\n';
 
-    std::cout << raioDvi << "\n";
+    double distanciaPorPulso_f = perimetro_f / resolucao;
+    std::cout << distanciaPorPulso_f << '\n';
 
-    float res = (raioDvi * 3.14159);
-    std::cout << res << "\n";
+    long pulsos_long               = metrosEsticados_f * (distanciaPorPulso_f / CONVERTER_CM_METROS);
 
-    float resposta = (res / resolucao);
+    std::cout << pulsos_long << '\n';
 
-    float teste = resposta * 3600;
-
-    std::cout << teste;
 }

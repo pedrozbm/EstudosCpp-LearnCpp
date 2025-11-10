@@ -1,23 +1,23 @@
-#include <iostream> 
+// h/t to reader yellowEmu for the idea of adding a counter
+#include <iostream>
 
-main(){
+int g_counter{ 0 };
 
-int var {7};
+void eatStack()
+{
+    std::cout << ++g_counter << ' ';
 
-    switch (var)
-    {
-    case 1:
-    
-    case 7:
+    // We use a conditional here to avoid compiler warnings about infinite recursion
+    if (g_counter > 0)
+        eatStack(); // note that eatStack() calls itself
 
-           
-    case 2:
-        std::cout << "3" <<std::endl;
-        break;
-    
-    default:
-        std::cout << "default" <<std::endl;
+    // Needed to prevent compiler from doing tail-call optimization
+    std::cout << "hi";
+}
 
-        break;
-    }
+int main()
+{
+    eatStack();
+
+    return 0;
 }
