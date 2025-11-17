@@ -42,12 +42,17 @@ public:
         delete m_ptr;
     }
 
+    // Aqui temos um construtuor que implementa a semantica de movimento
+    // Diferente da semantica de copia, o objeto original perde a posse do recurso, 
+    // evitando problemas de ponteiros pendentes
     Auto_ptr2(Auto_ptr2& a)
     {
-        m_ptr = a.m_ptr;
-        a.m_ptr = nullptr;
+
+        m_ptr = a.m_ptr; // Transferimos a propriedade para nosso ponteiro  
+        a.m_ptr = nullptr; // E definimos o ponteiro original como nulo
     }
 
+    // Também podemos implementar a sobrecarga do operador de atribuição
     Auto_ptr2 &operator=(Auto_ptr2& a)
     {
         if (&a == this)
@@ -97,3 +102,26 @@ int main()
 
     return 0;
 }
+
+
+// HISTORIA: 
+//  std::auto_ptr foi introduzido no c++98
+//  e removido no c++17. Foi a primeira tentativa de implementar
+// ponteiros inteligentes na biblioteca padrão do C++.
+// No entanto, apresentou inúmeros problemas que tornaram seu uso perigoso:
+// como std::auto_ptr implementava a semantica do moviemnto por meio de 
+// seu construtor de copia e do operador = , passar um sttd::auto_ptr por valor para 
+// uma função, fará com que seu recurso seja movido para o parametro da função,
+// e seja destruido no final da função, deixando o std::auto_ptr original com um ponteiro pendente.
+
+// Em segundo lugar, std::auto_ptr smepre apaga o conteudo usando
+// um metodo que nao seja de array, portanto não funcionara corretamente 
+// com arrays alocados dinamicamente. Pior que isso, ele não impedirá 
+// que seja passado um array para ele, o que pode levar a comportamentos indefinidos.
+
+// Por fim, std::auto_ptr não é compatível com outras classes da lib padrão
+// isso pq as classes da lib padrão partem do principio que ao copiar,
+// uma copia é realmente criada, e não movida;
+
+// std::auto_ptr foi descontinuado em c++11 e removido em c++17.
+
