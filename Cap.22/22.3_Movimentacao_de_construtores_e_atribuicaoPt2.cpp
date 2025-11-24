@@ -51,7 +51,8 @@ class Auto_ptr4{
 		*m_ptr = *a.m_ptr;
 
 		return *this;
-	}
+	}//Podemos deixar esse operador de atribuição invalido usando:
+	//Auto_ptr4& operator=(const Auto_ptr4& a) = delete;
 
 	// Atribuição de movimento
 	// Transferimos o recurso 
@@ -126,4 +127,39 @@ em vez de três;
 é rvalue, normalmente, ele será literal ou temporario
 
 O construtor de cópia e de atribuição são usados nos demais casos.
+
+CONSTRUTOR DE MOVIMENTAÇÃO IMPLÍCITA E OPERADOR DE ATRIBUIÇÃO DE MOVIMENTAÇÃO
+-> O compilador criará um constutor de movimentação implicito e um 
+operador de atribuição de movimentação se:
+- Não existem construtores de cópia ou operadores de cópia declarados pelo 
+usuario
+- Não existem construtores de movimentação ou operadores de atribuição de 
+movimentação declarados pelo usuario
+- Não existe um destrutor declarado pelo usuario
+AVISO:
+O CONSTRUTOR DE MOVIMENTAÇÃO IMPLÍCITO E A ATRIBUIÇÃO DE MOVIMENTAÇÃO
+COPIARÃO OS PONTEIROS, NÃO OS MOVERÃO. PARA MOVER UM PTR SERÁ PRECISO 
+DEFINIR O CONSTRUTOR DE MOVIMENTAÇÃO E ATRIBUIÇÃO DE MOVIMENTO 
+MANUALMENTE
+
+Para simplificar o tópico: 
+
+Imagine duas pessoas, Mia e John.
+John tem uma pasta cheia de documentos. A pasta contém alguns recursos, como arquivos de projetos.
+Mia pede a John acesso aos documentos.
+Opção Um: Copiar
+John diz: "Esses documentos são importantes para mim e talvez eu queira usá-los mais tarde. Posso fazer uma cópia e te entregar."
+Ele faz cópias e as entrega a Mia, que as guarda em sua pasta. Agora, tanto John quanto Mia têm os mesmos documentos, que podem usar independentemente.
+Essa abordagem é:
+Seguro porque ambos têm sua própria cópia.
+Caro porque fazer cópias requer tempo e recursos.
+Comum quando se compartilham dados que serão usados ​​de forma independente.
+Opção Dois: Mudar-se
+John diz: "Eu ia destruir esses documentos de qualquer maneira, então você pode pegar o que precisar."
+Mia então pega os documentos e os coloca dentro da pasta. Agora, a pasta de John está vazia e Mia é a nova dona dos documentos.
+Essa abordagem é:
+Rápido porque não há duplicação nem cópia.
+Eficiente porque a propriedade é simplesmente transferida.
+É arriscado se alguém tentar usar a pasta do John depois, porque ela estará vazia.
+
 */
