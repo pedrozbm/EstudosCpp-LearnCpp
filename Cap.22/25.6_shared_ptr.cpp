@@ -67,5 +67,4 @@ que agora existem shared_ptr adicionais gerenciando o recurso em conjunto
 unique_ptr pode ser convertido para shared_ptr por meio de um construtor de shared_ptr
 especial que aceita um valor de r de unique_ptr.
 No entanto, shared_ptr n pode ser convertido para unique_ptr
-
 */
