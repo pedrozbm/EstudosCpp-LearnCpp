@@ -19,7 +19,7 @@ class Timer{
             return std::chrono::duration_cast<Second>(Clock::now() - m_beg).count();
         }
 };
-int main() {1
+int main() {
     double num1, num2;
     char operacao;
 

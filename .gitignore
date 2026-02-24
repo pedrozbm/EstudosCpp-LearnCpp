@@ -5,3 +5,4 @@ MSVC
 cppProperties.json
 vscode.7z
 .fake
+*.exe
